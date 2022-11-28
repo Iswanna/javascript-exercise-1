@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta charset="UTF-8">
+    <title>JAVASRCIPT</title>
+  </head>
+  <body>
+    <script> 
+      let intro = prompt('Who is there?', '');
+        if (intro === 'Admin') {
+      let pass = prompt ('Password', '');
+        
+        if (pass === 'window') {
+          alert ('You are welcome');
+        } else if (pass === '' || pass === null) {
+          alert ('cancelled');
+        } else {
+          alert ('wrong password');
+        }
+          
+        
+      } else if (intro === '' || intro === null) {
+        alert ('cancelled');
+      } else {
+        alert ('I do not know you');
+      }
+      
+    </script>
+  </body>
+</html>

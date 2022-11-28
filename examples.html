@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript exercise one</title>
+
+    </head>
+    <body>
+        <script>
+            console.log("Hello world")
+            console.log(23+57)
+            console.log(45+84+23+59+70+67)
+            console.log((4 + 6 + 9) / 77)
+
+            let a = 10;
+            let max = 57;
+            let actual = max - 13;
+            let percentage = actual / max;
+//how to excape characters in strings
+            const bigmouth = 'I\'ve got no right to take my place…';
+            console.log(bigmouth);
+//concantenation using template literal (backticks): method 1, use ${}
+            const name = 'Chris';
+            const greeting = `Hello, ${name}`;
+            console.log(greeting); // "Hello, Chris"
+//concantenation using '+' METHOD 2
+            const greeting1 = "Hello";
+            const name1 = "Chris";
+            console.log(greeting1 + ", " + name1); // "Hello, Chris"
+//concatenation of strings using concat() method [METHOD 3]
+            let text11 = "Hello";
+            let text12 = "World";
+            let text13 = text11.concat(" ", text12); 
+            console.log(text13);
+//how to join two variables together using ${}
+            const one = 'Hello, ';
+            const two = 'how are you?';
+            const joined = `${one}${two}`;
+            console.log(joined); // "Hello, how are you?"
+//to convert string to number
+            const myString = '123';
+            const myNum = Number(myString);
+            console.log (typeof myNum);
+//to convert number to string
+            const myNum2 = 123;
+            const myString2 = myNum2.toString();
+            console.log (typeof myString2);
+//how to include expressions in strings
+            const song = 'Fight the Youth';
+            const score = 9;
+            const highestScore = 10;
+            const output = `I like the song ${song}. I gave it a score of ${score/highestScore * 100}%.`;
+            console.log(output);  // "I like the song Fight the Youth. I gave it a score of 90%."
+//how to write multiline strings. NOTE: template literals respect line breaks in the source code METHOD 1
+            const output1 = `I like the song.
+I gave it a score of 90%.`;
+            console.log(output1);  // I like the song.
+                      // I gave it a score of 90%.
+//how to write multilines using \n METHOD 2
+            const output2 = 'I like the song.\nI gave it a score of 90%.';
+            console.log(output2);  // I like the song.
+                      // I gave it a score of 90%.
+//how to return the length f a string using length property
+            let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let length = txt.length;
+            console.log(length);
+//javascript string slice(), substring() and substr()
+//EXAMPLE 1
+            let str = "Apple, Banana, Kiwi";
+             
+            let part = str.slice(7, 13);
+            console.log(part);  //example of string()
+            console.log(str.substring(7 ,13)); //example of substring()
+            console.log(str.substr(7 , 4)); //example of substr(). note that the 2nd value '6' is length
+//EXAMPLE 2
+            let part1 = str.slice(-12, -6);
+            console.log(part1); //example of string()
+//EXAMPLE 3
+            part = str.slice(7);
+            console.log(part); //example of string()
+            console.log(str.substr(7)); //example of substr()
+//EXAMPLE 4
+            part = str.slice(-4); //example of string()
+            console.log(part); 
+            console.log(str.substr(-4)); //example of substr()
+//How to replace string content
+            let text = "Please visit Microsoft and Microsoft!";
+
+            let newText = text.replace("Microsoft", "W3Schools"); //By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work
+            console.log(newText);
+            
+            let newText1 = text.replace(/MICROSOFT/i, "W3Schools"); //o replace case insensitive, use a regular expression with an /i flag (insensitive)
+            console.log(newText1); // note that Regular expressions are written without quotes.
+
+            let newText2 = text.replace(/Microsoft/g, "W3Schools");
+            console.log(newText2);
+//How to convert a string to uppercase
+            let text1 = "Hello World!";       // String
+
+            let text2 = text1.toLowerCase();  // text2 is text1 converted to lowercase
+            console.log(text2);
+
+            let text3 = text1.toUpperCase();  //text3 is text1 converted to uppercase
+            console.log(text3);
+//how to remove whitespaces from both sides of a string
+            let text111 = "      Hello World!      ";
+
+            let text222 = text111.trim();
+            console.log(text222);
+//how to remove whitespaces only from the start of a string 
+            let text223 = text111.trimStart();
+            console.log(text223);
+//how to remove whitespaces only from the end of a string 
+            let text224 = text111.trimEnd();
+            console.log(text224);
+//how to pad a string at the beginning with another string using padStart(). 
+            let text102 = "5";
+            let padded = text102.padStart(4,"x");
+            console.log(padded);
+
+            let text104 = 5; //note that padStart() is a string method 
+            let text106 = text104.toString(); //so, to pad a number, you need to first convert the number to a string
+            let padded45 = text106.padStart(3,"0");
+            console.log(padded45);
+//how to pad a string at the end with another string using padEnd().
+            let text203 = "5";
+            let padded10 = text203.padEnd(4,"x");
+            console.log(padded10);
+
+            let text107 = 5; //note that padEnd() is a string method 
+            let text108 = text107.toString(); //so, to pad a number, you need to first convert the number to a string
+            let padded46 = text108.padEnd(3,"0");
+            console.log(padded46);
+//how to extract string characters
+//METHOD 1 using charAt()
+            let text4 = "HELLO WORLD";
+
+            let char = text4.charAt(0);
+            console.log(char);
+//METHOD 2 using charCodeAt(). note that the charCodeAt() method returns the unicode of the character at a specified index in a string
+            let char11 = text4.charCodeAt(0); 
+            console.log(char11); //This method returns a UTF-16 code (an integer between 0 and 65535).
+//METHOD 3 using property access [] on strings
+            let char12 = text4[0];
+            console.log(char12);
+        </script>
+    </body>
+</html>
